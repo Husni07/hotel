@@ -37,7 +37,7 @@ const HeroSection = () => {
         <div className="relative flex flex-col-reverse gap-10 lg:gap-0 lg:flex-row lg:items-center lg:justify-between w-full">
           <div className="text-xl leading-tight w-full lg:w-1/2 lg:pr-8 ">
             <div className="mb-8 border-b-2">
-              <p className="text-transparent font-bold text-lg bg-clip-text bg-gradient-to-br from-indigo-600 from-20% to-green-600">
+              <p className="text-transparent font-bold text-lg bg-gradient-to-r from-fuchsia-700 to-red-600 bg-clip-text">
                 Description
               </p>
               <p className="text-base text-left text-gray-900">
@@ -48,7 +48,7 @@ const HeroSection = () => {
               </p>
             </div>
             <div>
-              <p className="text-transparent font-bold text-lg bg-clip-text bg-gradient-to-br from-indigo-600 from-20% to-green-600">
+              <p className="text-transparent font-bold text-lg bg-gradient-to-r from-fuchsia-700 to-red-600 bg-clip-text">
                 Fasilitas
               </p>
               <div className="text-base text-left text-gray-700 mt-2 leading-tight">
