@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 import HeroImage from "../components/heroimage";
+import HeroSection from "./hero";
+import Image from "next/image";
 
 const slides = [
   {
@@ -19,7 +21,17 @@ console.log("Slides in RoomPage:", slides);
 export default function RoomPage() {
   return (
     <div>
-      <HeroImage slides={slides} />
+      {/* <HeroImage slides={slides} /> */}
+      <div className="">
+        <Image
+          src={"/Images/kamar.jpg"}
+          alt="image"
+          width={1280}
+          height={600}
+          className="object-cover"
+        />
+      </div>
+      <HeroSection />
     </div>
   );
 }

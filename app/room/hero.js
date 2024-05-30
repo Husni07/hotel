@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import HeroImage from "./heroimage";
 
 const HeroSection = () => {
   useEffect(() => {
@@ -11,6 +12,20 @@ const HeroSection = () => {
       duration: 500,
     });
   });
+
+  const slides = [
+    {
+      url: "https://picsum.photos/1200/600?grayscale",
+    },
+    {
+      url: "https://picsum.photos/1200/600",
+    },
+    {
+      url: "https://cdn.oneesports.id/cdn-data/sites/2/2024/01/404440064_892730489223202_7583215412251772023_n-1024x576.jpg",
+    },
+
+    // Tambahkan gambar lainnya di sini
+  ];
   return (
     <section className="relative py-32 bg-white lg:py-36">
       <div className="flex justify-center mb-10">
@@ -62,15 +77,9 @@ const HeroSection = () => {
             </div>
           </div>
           <div
-            className="relative flex flex-1 max-w-3xl mx-auto lg:w-1/2 lg:h-auto lg:max-w-none lg:mx-0 mt-8 lg:mt-0"
+            className="w-full mx-auto lg:w-1/2 lg:h-auto lg:max-w-none lg:mx-0 mt-8 lg:mt-0"
           >
-            <Image
-              src={"/Images/kamar.jpg"}
-              alt="image"
-              width={2350}
-              height={2350}
-              className="object-cover lg:object-contain rounded-3xl"
-            />
+            <HeroImage slides={slides}/>
           </div>
         </div>
       </div>
