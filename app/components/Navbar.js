@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const navItem = (url, title) => {
   return (
-    <div className="text-base font-bold underline w-50 underline-offset-4 hover:decoration-ungu hover:text-merah hover:ease-in-out hover:duration-500">
+    <div className="text-base font-bold text-black hover:ease-in-out hover:duration-500">
       <Link href={url}>
         <span>{title}</span>
       </Link>
@@ -13,7 +13,7 @@ const navItem = (url, title) => {
 };
 const Navbar = () => {
   return (
-    <div className="sticky top-0 z-50 w-full bg-transparent backdrop-blur-md">
+    <div className="sticky top-0 z-50 w-full bg-transparent backdrop-blur-md border-b-2 border-slate-300">
       <div className="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto">
         <div className="flex items-center space-x-5">
           <Link href="" className="">
@@ -27,9 +27,9 @@ const Navbar = () => {
         </div>
         <div className="gap-2 md:flex">
           {navItem("/", "Home")}
-          {navItem("/room", "room")}
-          {navItem("/room2", "room2")}
-          {navItem("/crypto", "Crypto")}
+          {navItem("/room-v2", "room v2")}
+          {navItem("/room-v3", "room v3")}
+          {navItem("/", "TBA")}
         </div>
       </div>
     </div>

@@ -4,8 +4,7 @@ import Image from "next/image";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import HeroImage from "./heroimage";
-
+import Slider from "../components/Slider";
 const HeroSection = () => {
   useEffect(() => {
     AOS.init({
@@ -23,16 +22,12 @@ const HeroSection = () => {
     {
       url: "https://cdn.oneesports.id/cdn-data/sites/2/2024/01/404440064_892730489223202_7583215412251772023_n-1024x576.jpg",
     },
-
-    // Tambahkan gambar lainnya di sini
   ];
   return (
     <section className="relative py-32 bg-white lg:py-36">
-      <div className="flex justify-center mb-10">
-        <div
-          className="font-bold text-xl text-black z-10 flex justify-center flex-col items-center text-center"
-        >
-          <h1>Fataya Homestay</h1>
+      <div className="flex justify-center mb-8">
+        <div className="font-bold w-[80%] text-black z-10 flex justify-center flex-col items-center text-center">
+          <h1 className="mb-4 text-4xl">Fataya Homestay</h1>
           <p className="text-base px-5">
             Temukan kenyamanan dan kemewahan di Tempat kami di Kota Rembang.
             Nikmati fasilitas terbaik, mulai dari kamar tidur yang nyaman hingga
@@ -56,30 +51,29 @@ const HeroSection = () => {
                 Description
               </p>
               <p className="text-base text-left text-gray-900">
-                Di tempat ini kami menawarkan kamar tidur yang nyaman buat Checkin, kamar mandi
-                pribadi, ruang tamu yang hangat, dapur lengkap, dan fasilitas
-                tambahan seperti kolam renang untuk memastikan pengalaman
-                menginap yang menyenangkan dan berkualitas.
+                Di tempat ini kami menawarkan kamar tidur yang nyaman buat
+                Checkin, kamar mandi pribadi, ruang tamu yang hangat, dapur
+                lengkap, dan fasilitas tambahan seperti kolam renang untuk
+                memastikan pengalaman menginap yang menyenangkan dan
+                berkualitas.
               </p>
             </div>
             <div>
               <p className="text-transparent font-bold text-lg bg-gradient-to-r from-fuchsia-700 to-red-600 bg-clip-text">
                 Fasilitas
               </p>
-              <div className="text-base text-left text-gray-700 mt-2 leading-tight">
-                <p>Playstation 5 full set</p>
-                <p>Free Wi-Fi</p>
-                <p>TV layar lebar</p>
-                <p>Billiard</p>
-                <p>AC</p>
-                <p>Kolam renang</p>
+              <div className="text-base list-image-[url(/Images/check-mark.svg)] text-left text-gray-700 mt-2 leading-tight">
+                <li>Playstation 5 full set</li>
+                <li>Free Wi-Fi</li>
+                <li>TV layar lebar</li>
+                <li>Billiard</li>
+                <li>AC</li>
+                <li>Kolam renang</li>
               </div>
             </div>
           </div>
-          <div
-            className="w-full mx-auto lg:w-1/2 lg:h-auto lg:max-w-none lg:mx-0 mt-8 lg:mt-0"
-          >
-            <HeroImage slides={slides}/>
+          <div className="w-full mx-auto lg:w-1/2 lg:h-auto lg:max-w-none lg:mx-0 mt-8 lg:mt-0">
+            <Slider slides={slides} />
           </div>
         </div>
       </div>

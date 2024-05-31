@@ -1,7 +1,7 @@
 import Image from "next/image";
-import HeroImage from "./components/heroimage";
 import HeroSection from "./components/hero";
 import Galery from "./components/galery";
+import Slider from "./components/Slider";
 
 export default function Home() {
   const slides = [
@@ -17,7 +17,15 @@ export default function Home() {
   ];
   return (
     <>
-      <HeroImage slides={slides} />
+      <div
+        className="bg-fixed bg-cover"
+        style={{
+          backgroundImage:
+            "url('https://media.istockphoto.com/id/1455382950/id/foto/tempat-tidur-yang-nyaman-tanpa-tamu-di-kamar-hotel.jpg?s=612x612&w=0&k=20&c=QTlpE-ImejQa9QjFK-AwhwtBAdEOTsXcfQpcLzHRjkk=')",
+        }}
+      >
+        <Slider slides={slides} />
+      </div>
 
       <HeroSection />
       {/* <Galery /> */}

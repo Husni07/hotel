@@ -3,7 +3,7 @@ import React, { useState, useEffect,useCallback } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
 
-function HeroImage({ slides }) {
+function Slider({ slides }) {
   // console.log(`page hgjg${slides}`);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -32,14 +32,8 @@ function HeroImage({ slides }) {
   }, [nextSlide]);
 
   return (
-    <div
-      className="bg-fixed bg-cover"
-      style={{
-        backgroundImage:
-          "url('https://media.istockphoto.com/id/1455382950/id/foto/tempat-tidur-yang-nyaman-tanpa-tamu-di-kamar-hotel.jpg?s=612x612&w=0&k=20&c=QTlpE-ImejQa9QjFK-AwhwtBAdEOTsXcfQpcLzHRjkk=')",
-      }}
-    >
-      <div className="max-w-[1400px] h-[780px] w-full m-auto py-16 px-4 relative group">
+
+      <div className="max-w-[1400px] h-[580px] w-full m-auto py-16 relative group">
         <div
           style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
           className="w-full h-full duration-500 bg-center bg-cover rounded-2xl"
@@ -62,8 +56,7 @@ function HeroImage({ slides }) {
           ))}
         </div>
       </div>
-    </div>
   );
 }
 
-export default HeroImage;
+export default Slider;
